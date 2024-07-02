@@ -24,3 +24,5 @@ db.countries.findOne({'name.common': 'Mongolia'});
 ------------------------------4----------------------------------
 
 db.countries.find({}, {'name.official': 1}, {'languages' : {$regex : 'néerlandais'}});
+
+------------------------------5----------------------------------
