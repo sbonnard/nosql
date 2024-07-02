@@ -1,17 +1,7 @@
--- NoSQL 
-
-db.createCollection('personnes');
-
-show collections;
-
-db.personnes.insertOne({_id:1, name:'Zangief', age: 30});
-
-db.personnes.find();
-
 ----------------- QUERIES EXERCICES -------------------------
 ------------------------------1----------------------------------
 
-db.countries.find({}, {'name.official': 1}).skip(9).limit(13);
+db.countries.find({}, {'name.official': 1}).skip(9).limit(12);
 
 -------------------------------2----------------------------------
 
