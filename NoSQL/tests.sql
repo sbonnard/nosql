@@ -23,6 +23,12 @@ db.countries.findOne({'name.common': 'Mongolia'});
 
 ------------------------------4----------------------------------
 
-db.countries.find({}, {'name.official': 1}, {'languages' : {$regex : 'néerlandais'}});
+db.countries.find({"languages.nld": "Dutch"}, {'name.official': 1});
 
 ------------------------------5----------------------------------
+
+db.countries.find({'name.official' : /^S/}, {'name.official': 1});
+
+------------------------------6----------------------------------
+
+db.countries.find({'area':{$gte:400000,$lte:500000}}, {'name.official': 1});
